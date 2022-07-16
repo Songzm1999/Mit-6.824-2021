@@ -2,7 +2,7 @@
 
 由于在课程的官网上不建议把代码都贴出来，我这里只是附上一些数据结构和介绍一下设计的思路。整个程序分为四个部分：
 
-![](.\images\总体结构.png)
+![](https://github.com/Songzm1999/Mit-6.824-2021/blob/master/images/总体结构.png)
 
 ## Commons
 
@@ -88,7 +88,7 @@ type FinishTaskResponse struct {
 
 Worker这部分的执行逻辑比较单一，就是不断地向Coordinator请求任务，来不同的任务类型执行即可
 
-![](.\images\lab1-Worker.jpg)
+![](https://github.com/Songzm1999/Mit-6.824-2021/blob/master/images/lab1-Worker.jpg)
 
 需要注意的一点是，在Reduce执行需要读取中间文件，这一步可以直接读取文件夹下那些文件符合条件，也可以通过在Coordinator中保存所有中间文件信息，并传输给Reducer。我这里选择的是后者，所以在Map执行结束后，将中间文件列表存储在Task.Files中传输回去。
 
@@ -136,7 +136,7 @@ func (c *Coordinator) AskTask(args *AskTaskRequest, resp *AskTaskResponse) error
 
 这部分就是接受来自Worker的请求，当程序还有未执行的Task时，然后返回一个Task给Worker
 
-![](.\images\lab1-AskTask.jpg)
+![](https://github.com/Songzm1999/Mit-6.824-2021/blob/master/images/lab1-AskTask.jpg)
 
 ### FinishTask
 
