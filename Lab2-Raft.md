@@ -76,7 +76,7 @@ Lab2A 实现的基本功能就是要能选举出一个Leader，**这部分可以
   - 需要判断Candidate的Term和自身的Term，如果Candidate的Term小，是不能投票的
   - 只有当Raft的状态是Follower、当前任期没有投过票、Candidate的日志要更新(论文5.4.1节有关于日志更新的解释)才能投票
 
-  ![](.\images\lab2-RequestVote.jpg)
+  ![](https://github.com/Songzm1999/Mit-6.824-2021/blob/master/images/lab2-RequestVote.jpg)
 
   
 
@@ -102,7 +102,7 @@ type LogEntry struct {
 
 向Follower发送日志的逻辑如下：
 
-![](.\images\lab2-sendAppendEntries.jpg)
+![](https://github.com/Songzm1999/Mit-6.824-2021/blob/master/images/lab2-sendAppendEntries.jpg)
 
 需要注意的点如下：
 
