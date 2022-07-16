@@ -2,7 +2,7 @@
 
 Lab3需要在Lab2的Raft基础上，实现一个键值数据库，客户端提供的操作包括Get、Put、Append，并且要实现在客户端的去重操作。我觉得这张图可以很好讲解各个模块的执行流程：
 
-![](.\images\Lab3-架构.png)
+![](https://github.com/Songzm1999/Mit-6.824-2021/blob/master/images/Lab3-架构.png)
 
 ## 3A
 
@@ -29,7 +29,7 @@ type Clerk struct {
 
 Get、Put、Append操作需要注意当RPC失败、超时、Leader错误时要重新发送RPC，直到发送成功：
 
-![](.\images\Lab3-Client.jpg)
+![](https://github.com/Songzm1999/Mit-6.824-2021/blob/master/images/Lab3-Client.jpg)
 
 以Get操作为例，PutAppend同理：
 
