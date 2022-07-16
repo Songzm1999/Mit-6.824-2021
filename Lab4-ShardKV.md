@@ -4,7 +4,7 @@ MIT 6.824 课程的lab4 是在lab2 Raft算法基础上实现一个multi-raft的K
 
 lab4A 要实现的是配置的管理服务，和lab3类似，不过这里存储的是集群的配置。类似于HDFS的Master角色。它主要记录每个Raft组副本数；以及KV的shard被分配到了哪个raft组。下面是整体架构图：
 
-![](.\images\Lab4-整体架构.png)
+![](https://github.com/Songzm1999/Mit-6.824-2021/blob/master/images/Lab4-整体架构.png)
 
 整个集群分为三个部分：
 
